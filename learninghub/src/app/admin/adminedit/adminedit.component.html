@@ -1,0 +1,33 @@
+<div class="image">
+
+<div class="form" style="text-align: center; padding-top: 5%; color: white">
+
+    <h2><strong style="color: black">Course List</strong></h2><br>
+    <div class="table-responsive" style="width: 100%;">
+      <table class="table table-striped table-bordered table-hover" style="width: 100%; color: white; background: rgba(0,0,0,0.7)">
+       
+        <tr style="color: goldenrod">
+          <th>TechnologyName</th>
+          <th>Commission</th>          
+          <th>Delete</th>
+          <th>Update</th>
+        </tr>
+        <tr *ngFor="let technology of technologies">
+          <td>{{technology.technologyName}}</td>
+          <td>{{technology.commission}}</td>          
+          <td><a (click)="delete_technology(technology.id)" title="Delete"><i class="fa fa-edit" style="color:red;"></i></a></td>
+          <td [routerLink]="['/adminupdate', technology.id]"><a title="Update"><i class="fa fa-edit"></i></a></td>
+        </tr>
+      </table>
+      <div style="align-items: center; padding-top: 3%;">
+          <button  class="btn btn-dark form-button" routerLink="/addtechnology">Add Technology</button></div>
+    </div>
+    <div style="align-items: center; padding-top: 1%;">
+      <button  class="btn btn-dark form-button" routerLink="/adminpage">Back to Dash</button></div>
+  
+  
+    <div>
+      <p class="red-text">{{error_message}}</p>
+    </div>
+  </div>
+</div>

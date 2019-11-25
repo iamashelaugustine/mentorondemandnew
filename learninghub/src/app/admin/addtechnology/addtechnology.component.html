@@ -1,0 +1,49 @@
+<div class="image">
+
+    <div class="text-center">
+    
+    <h1 class="font-weight-light" style="padding-top: 8%">
+            ADD TECHNOLOGY
+    </h1>
+    </div>
+    
+            <div class="d-flex justify-content-center" style="padding-top: 5%">
+                    <div class="card" style="height: auto">
+                            <div class="card-body">
+                                    <form (ngSubmit)="submit_form_data(form1.value)" #form1="ngForm">
+                                            <div class="input-group form-group">
+                                                    <div class="input-group-prepend">
+                                                            <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                                    </div>
+                                                    <input type="text" class="form-control" [(ngModel)]="technology_name" name="TechnologyName" #technology_name2="ngModel" required placeholder="Enter technology Name">
+                                                    </div>             
+                                                <div class="input-group form-group">
+                                                    <div class="input-group-prepend">                                                        
+                                                        <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                                </div>
+                                                <input type="text" class="form-control" [(ngModel)]="commission" name="Commission" #commission2="ngModel" required placeholder="Enter Commission">
+                                                </div>                                          
+    
+
+                                            <span *ngIf="technology_name2.invalid && technology_name2.dirty">
+                                                    <small *ngIf="technology_name2.errors.required" class="red-text"> Technology name should not be empty</small>
+                                                </span><br>
+
+
+                                                
+                                            <div class="form-group">
+                                                    <button [disabled]="!form1.form.valid" class="btn float-right btn-warning">Add Technology</button>
+    
+                                            </div>
+
+                                            
+                                    </form>
+                            </div>
+    
+                            <div>
+                                    <h3 class="error" style="color: white">{{message}}</h3>
+                                  </div>
+    
+                    </div>
+            </div>
+        </div>    

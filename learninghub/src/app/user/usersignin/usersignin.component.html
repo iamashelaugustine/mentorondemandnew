@@ -1,0 +1,56 @@
+<div class="image">
+
+<div class="text-center">
+
+<h1 class="font-weight-light" style="padding-top: 8%">
+        STUDENT LOGIN
+</h1>
+</div>
+
+        <div class="d-flex justify-content-center" style="padding-top: 5%">
+                <div class="card" style="height: auto">
+                        <div class="card-body">
+                                <form (ngSubmit)="submit_form_data(form1.value)" #form1="ngForm">
+                                        <div class="input-group form-group">
+                                                <div class="input-group-prepend">
+                                                        <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                                </div>
+                                                <input type="email" class="form-control" [(ngModel)]="email_id" name="email_id" #email_id_ref="ngModel" required placeholder="Enter Email Id">
+                                                
+                                                
+                                        </div>
+                                        <div class="input-group form-group">
+                                                <div class="input-group-prepend">
+                                                        <span class="input-group-text"><i class="fa fa-key"></i></span>
+                                                </div>
+                                                <input type="password" class="form-control" [(ngModel)]="pass_word" name="pass_word" #pass_word_ref="ngModel" required placeholder="Enter Password">
+                                                
+                                        </div>
+                                        <span *ngIf="email_id_ref.invalid && email_id_ref.dirty">
+                                                <small *ngIf="email_id_ref.errors.required" class="red-text"> E-mail should not be empty</small>
+                                            </span><br>
+
+                                            <span *ngIf="pass_word_ref.invalid && pass_word_ref.dirty">
+                                                <small *ngIf="pass_word_ref.errors.required" class="red-text"> Password should not be empty</small>
+                                              </span><br>
+                                        
+                                        <div class="form-group">
+                                                <button [disabled]="!form1.form.valid" class="btn float-right btn-warning">Login</button>
+
+                                        </div>
+                                </form>
+                        </div>
+
+                        <div class="card-footer">
+                                <div class="d-flex justify-content-center links">
+                                        Don't have an account?<a routerLink='../usersignup'>Sign Up</a>
+                                </div>
+                        </div>
+
+                        <div>
+                                <h3 class="error" style="color: white">{{error_message}}</h3>
+                              </div>
+
+                </div>
+        </div>
+    </div>    

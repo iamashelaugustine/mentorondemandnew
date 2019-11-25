@@ -1,0 +1,62 @@
+<div class="image">
+
+    <div class="text-center">
+    
+    <h1 class="font-weight-light" style="padding-top: 8%">
+            ADD COURSE
+    </h1>
+    </div>
+    
+            <div class="d-flex justify-content-center" style="padding-top: 5%">
+                    <div class="card" style="height: auto">
+                            <div class="card-body">
+                                    <form (ngSubmit)="submit_form_data()" #form1="ngForm">
+                                            <div class="input-group form-group">
+                                                    <div class="input-group-prepend">
+                                                            <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                                    </div>
+                                                    <input type="text" class="form-control" [(ngModel)]="course_name" name="course_name" #course_name2="ngModel" required placeholder="Enter Course Name">
+                                                    </div>
+
+                                                    <div class="input-group form-group">
+                                                        <div class="input-group-prepend">
+                                                                <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                                        </div>
+                                                        <input type="text" class="form-control" [(ngModel)]="start_date" name="start_date" #start_date2="ngModel" required placeholder="Enter Starting Date YYYY-MM-DD">
+                                                        </div>
+
+                                                        <div class="input-group form-group">
+                                                            <div class="input-group-prepend">
+                                                                    <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                                            </div>
+                                                            <input type="text" class="form-control" [(ngModel)]="trainer_name" name="trainer_name" #trainer_name2="ngModel" required placeholder="Enter Trainer Name">
+                                                            </div>
+    
+
+                                            <span *ngIf="course_name2.invalid && course_name2.dirty">
+                                                    <small *ngIf="course_name2.errors.required" class="red-text"> Course name should not be empty</small>
+                                                </span><br>
+    
+                                                <span *ngIf="start_date2.invalid && start_date2.dirty">
+                                                    <small *ngIf="start_date2.errors.required" class="red-text"> Starting date should not be empty</small>
+                                                </span><br>
+                                                <span *ngIf="trainer_name2.invalid && trainer_name2.dirty">
+                                                        <small *ngIf="trainer_name2.errors.required" class="red-text"> Trainer name should not be empty</small>
+                                                    </span>
+                                                
+                                            <div class="form-group">
+                                                    <button [disabled]="!form1.form.valid" class="btn float-right btn-warning">Add Course</button>
+    
+                                            </div>
+
+                                            
+                                    </form>
+                            </div>
+    
+                            <div>
+                                    <h3 class="error" style="color: white">{{message}}</h3>
+                                  </div>
+    
+                    </div>
+            </div>
+        </div>    

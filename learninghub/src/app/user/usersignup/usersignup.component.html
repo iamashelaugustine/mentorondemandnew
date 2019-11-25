@@ -1,0 +1,72 @@
+<div class="image">
+        <div class="text-center">
+            <h1 class="font-weight-light" style="padding-top: 8%">
+                STUDENT SIGNUP
+            </h1>
+          </div>
+      
+          <div class="d-flex justify-content-center" style="padding-top: 5%">
+            <div class="card" style="height: auto">
+                    <div class="card-body">
+                            <form (ngSubmit)="submit_form_data(form1.value)" #form1="ngForm">
+                                    <div class="input-group form-group">
+                                            <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                            </div>
+                                            <input type="text" class="form-control" [(ngModel)]="user_name" name="user_name" #user_name2="ngModel" minlength="3" required placeholder="Enter User Name" >
+                                           
+                                            
+                                    </div>
+                                    <div class="input-group form-group">
+                                      <div class="input-group-prepend">
+                                              <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                                      </div>
+                                      <input type="email"  [(ngModel)]="email_id" class="form-control" name="email_id" #email_id2="ngModel" required placeholder="Enter Email Id" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$">
+                                    
+                              </div>
+                                    <div class="input-group form-group">
+                                            <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="fa fa-key"></i></span>
+                                            </div>
+                                            <input type="password" [(ngModel)]="pass_word" class="form-control" name="pass_word" #pass_word2="ngModel" required placeholder="Enter Password">
+                                            
+                                    </div>
+
+                                    <div class="input-group form-group">
+                                        <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                                        </div>
+                                        <input type="date" [(ngModel)]="dob" class="form-control" name="dob" #pass_word2="ngModel" required placeholder="Enter Date of Birth">                                        
+                                </div>
+
+                                    <div *ngIf="user_name2.invalid && (user_name2.dirty || user_name2.touched)" class="red-text">
+                                                <small *ngIf="user_name2.errors.required"> Username should not be empty.</small>
+                                                <small *ngIf="user_name2.errors.minlength"> User Name must be at least 3 characters long.</small>
+                                    </div>
+
+                                    <span *ngIf="email_id2.invalid && (email_id2.dirty || email_id2.touched)" class="red-text">
+                                                <small *ngIf="email_id2.errors.required"> Email Id should not be empty.</small>
+                                                <small *ngIf="email_id2.errors.pattern"> This is not a valid Email Id!</small>
+                                              </span><br>
+
+                                    <span *ngIf="pass_word2.invalid && (pass_word2.dirty || pass_word2.touched)" class="red-text">
+                                                <small *ngIf="pass_word2.errors.required"> Password should not be empty.</small>
+                                              </span>
+                                    <div class="form-group">
+                                            <!-- <input type="button" value="Sign Up" class="btn float-right login_btn" [disabled]="!form1.form.valid"> -->
+                                            <button [disabled]="!form1.form.valid" class="btn float-right btn-warning">Sign Up</button>
+                                    </div>
+                            </form>
+                    </div>
+                    <div class="card-footer">
+                            <div class="d-flex justify-content-center links">
+                                    Already have an account?<a routerLink='../usersignin'>Sign In</a>
+                            </div>
+                    </div>
+                    <div>
+                                <br><p class="red-text">{{message}}</p>
+                </div>
+            </div>
+      </div>
+
+</div>

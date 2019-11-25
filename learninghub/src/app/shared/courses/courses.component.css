@@ -1,0 +1,212 @@
+.image{
+  height:37.5em; background-size:cover; width:auto;
+  background-image:url('https://images.unsplash.com/photo-1472289065668-ce650ac443d2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80');
+  background-position:50% 50%;
+}
+
+
+
+body {
+    margin: 0;
+    background: #ffffff;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 400;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: #1e1e2f;
+  }
+
+.container {
+    width: 1300px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+.indented {
+    padding-left: 80pt;
+  } 
+
+  .form {
+    position: relative;
+    
+    margin: 0 auto 200px;
+    padding: 100px;
+    text-align: center;
+  }
+
+  .form .message {
+    font-size: 12px;
+  }
+
+  .sgbody {
+    font-family: "Roboto", sans-serif;     
+  }
+
+  .login-page {
+    width: 360px;
+    padding: 5% 0 0;
+    margin: auto;
+  }
+
+  .search{
+    padding-left: 900px;
+  }
+
+  .searchhome{
+    padding-left: 850px;
+  }
+
+  .padleft{
+    padding-left: 580px;
+  }
+  
+  .card{
+    height: 370px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 400px;
+    background-color: rgba(0,0,0,0.7) !important;
+    }
+
+.card-text{
+    color: #ffffff;
+}
+
+    .remember{
+      color: white;
+      }
+      
+      .remember input
+      {
+      width: 20px;
+      height: 20px;
+      margin-left: 15px;
+      margin-right: 5px;
+      }
+      
+      .login_btn{
+      color: black;
+      background-color: #FFC312;
+      width: 100px;
+      }
+      
+      .login_btn:hover{
+      color: #FFC312 ;
+      background-color: #333333;
+      }
+      
+      .links{
+      color: white;
+      }
+      
+      .links a{
+      margin-left: 4px;
+      }
+
+      .input-group-prepend span{
+        width: 50px;
+        background-color: #FFC312;
+        color: black;
+        border:0 !important;
+        }
+        
+        input:focus{
+        outline: 0 0 0 0  ;
+        box-shadow: 5 5 5 5 ;
+        
+        }
+  
+.btnanim{
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.search-hero {
+  max-width: 500px;
+  margin:10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: fit-content; 
+  
+ background-color:rgba(0,0,0,0.6);
+  background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+  
+ 
+}
+
+/* Modal Content/Box */
+.modal-content {
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+   /* Could be more or less, depending on screen size */
+   /* background-color: #379683; */
+   background: transparent;
+   border: none;
+   border-radius: 10px;
+  
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color:white;;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.pwd {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
