@@ -5859,11 +5859,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HP\\source\\repos\\MentorOnDemandNew\\AuthLibrary\\AuthLibrary.csproj",
+      "projectUniqueName": "C:\\Users\\HP\\Desktop\\mentorondemand\\MentorOnDemandNew\\AuthLibrary\\AuthLibrary.csproj",
       "projectName": "AuthLibrary",
-      "projectPath": "C:\\Users\\HP\\source\\repos\\MentorOnDemandNew\\AuthLibrary\\AuthLibrary.csproj",
+      "projectPath": "C:\\Users\\HP\\Desktop\\mentorondemand\\MentorOnDemandNew\\AuthLibrary\\AuthLibrary.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HP\\source\\repos\\MentorOnDemandNew\\AuthLibrary\\obj\\",
+      "outputPath": "C:\\Users\\HP\\Desktop\\mentorondemand\\MentorOnDemandNew\\AuthLibrary\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5879,8 +5879,8 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "C:\\Users\\HP\\source\\repos\\MentorOnDemandNew\\AdminLibrary\\AdminLibrary.csproj": {
-              "projectPath": "C:\\Users\\HP\\source\\repos\\MentorOnDemandNew\\AdminLibrary\\AdminLibrary.csproj"
+            "C:\\Users\\HP\\Desktop\\mentorondemand\\MentorOnDemandNew\\AdminLibrary\\AdminLibrary.csproj": {
+              "projectPath": "C:\\Users\\HP\\Desktop\\mentorondemand\\MentorOnDemandNew\\AdminLibrary\\AdminLibrary.csproj"
             }
           }
         }
